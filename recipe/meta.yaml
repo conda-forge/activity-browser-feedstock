@@ -27,7 +27,9 @@ requirements:
     - brightway2 >=2.4.2
     - pyperclip
     - eidl >=1.4.2
+    - libxml2 <=2.10.4
     - networkx
+    - pint <=0.21
     - pyside2 >=5.15.5
     - qt-webengine
     - numpy =1.23.5
