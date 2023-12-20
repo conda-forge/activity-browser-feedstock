@@ -12,27 +12,27 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - activity-browser = activity_browser:run_activity_browser
 
 requirements:
   host:
     - pip
-    - python >=3.8,<3.10
+    - python >=3.8,<=3.11,!=3.10
     - setuptools
   run:
-    - python >=3.8,<3.10
+    - python >=3.8,<=3.11,!=3.10
     - arrow
     - brightway2 >=2.4.4
     - pyperclip
-    - eidl >=1.4.2
+    - eidl >=2.0.1
     - libxml2 <=2.10.4
     - networkx
     - pint <=0.21
     - pyside2 >=5.15.5
     - qt-webengine
-    - numpy =1.23.5
+    - numpy >=1.23.5
     - salib >=1.4
     - seaborn
 
