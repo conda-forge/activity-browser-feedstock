@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
   entry_points:
     - activity-browser = activity_browser:run_activity_browser
 
@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=3.8,<=3.11,!=3.10
     - arrow
-    - brightway2 >=2.4.4
+    - brightway2 =2.4.4
     - pyperclip
     - eidl >=2.0.1
     - libxml2 <=2.10.4
