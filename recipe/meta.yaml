@@ -1,5 +1,5 @@
 {% set name = "activity-browser" %}
-{% set version = "2.9.7" %}
+{% set version = "2.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/LCA-ActivityBrowser/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: ac5c3866b858648fdb4719cd6b90385836fc1df3a83107aa716762a568267387
+  sha256: b82288686e79bbffa330f4aa154d99f7739aff01c4e086d0758faa1b3afe4321
 
 build:
   noarch: python
@@ -15,21 +15,21 @@ build:
   number: 0
   entry_points:
     - activity-browser = activity_browser:run_activity_browser
+  script_env:
+    - QT_QPA_PLATFORM=offscreen
 
 requirements:
   host:
     - pip
-    - python >=3.8,<3.12
+    - python >=3.10,<3.12
     - setuptools
   run:
-    - python >=3.8,<3.12
+    - python >=3.10,<3.12
     - arrow
-    - brightway2 =2.4.4
-    - eidl >=2.0.1
-    - libxml2 <=2.10.4
+    - brightway2 =2.4.6
     - networkx
     - numpy >=1.23.5
-    - pandas <=2.1.4
+    - pandas >=2.2.1
     - pint <=0.21
     - pyperclip
     - pyside2 >=5.15.5
