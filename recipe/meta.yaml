@@ -1,5 +1,5 @@
 {% set name = "activity-browser" %}
-{% set version = "2.10.2" %}
+{% set version = "2.10.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/LCA-ActivityBrowser/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 1e1060c120a77470f0edd7141b19734db6f1c492e97e2e1c39dafc80d344639c
+  sha256: 44c3f2824000bb0a2d19de1974fb733c2b62f89a255af4192d4a7dc0d77b0025
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   entry_points:
     - activity-browser = activity_browser:run_activity_browser
   script_env:
