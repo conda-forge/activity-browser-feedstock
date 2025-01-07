@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "activity-browser" %}
 {% set version = "2.11.0" %}
 
@@ -12,7 +13,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - activity-browser = activity_browser:run_activity_browser
   script_env:
@@ -21,10 +22,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.10,<3.12
+    - python {{ python_min }}
     - setuptools
   run:
-    - python >=3.10,<3.12
+    - python >={{ python_min }},<3.12
     - arrow
     - brightway2 =2.4.6
     - networkx
@@ -38,6 +39,8 @@ requirements:
     - seaborn
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - activity_browser
   # No test of activity-browser as no --help or --version available
