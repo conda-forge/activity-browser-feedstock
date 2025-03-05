@@ -1,5 +1,6 @@
 {% set name = "activity-browser" %}
 {% set version = "2.10.3" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -21,10 +22,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.10,<3.12
+    - python {{ python_min }}
     - setuptools
   run:
-    - python >=3.10,<3.12
+    - python >={{ python_min }},<3.12
     - arrow
     - brightway2 =2.4.6
     - ecoinvent_interface >=3.1
