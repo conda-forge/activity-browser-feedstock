@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "activity-browser" %}
-{% set version = "2.11.2" %}
+{% set version = "3.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/LCA-ActivityBrowser/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 6c6ff821c64e240d7d90a719c2dabc29667cb53886b6271f957732a121721071
+  sha256: c8f43a8dae77d63a9e6ca60f40ef2b80607ec70a279f8d62a05c99e27abaefbd
 
 build:
   noarch: python
